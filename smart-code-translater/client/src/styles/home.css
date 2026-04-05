@@ -1,0 +1,241 @@
+.home-page {
+  background: #0b0f19;
+  color: white;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #1f2937;
+}
+
+.header .left {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logout {
+  background: #ef4444;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MAIN LAYOUT */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* EDITOR */
+.editor-box {
+  background: #020617;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* ACTIONS */
+.actions-box {
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.actions-box h3 {
+  margin-bottom: 10px;
+}
+
+.actions-box button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+}
+
+.actions-box button:hover {
+  background: #334155;
+}
+
+.actions-box button.active {
+  background: #2563eb;
+}
+
+/* RUN BUTTON */
+.run-btn {
+  background: #22c55e !important;
+  font-weight: bold;
+}
+
+/* OUTPUT */
+.output-box {
+  background: #020617;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.output-box pre {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+/* STATES */
+.typing {
+  color: #60a5fa;
+}
+
+.error {
+  color: #ef4444;
+}
+/* 🔹 Language text (just font fix) */
+.editor-box label,
+.language-label {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+  color: #cbd5e1;
+}
+
+/* 🔹 Language dropdown (no layout change) */
+select {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🔹 Action buttons (ONLY font change) */
+.actions-box button {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🔹 Run button font */
+.run-btn {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+}
+/* 🔥 OUTPUT BOX FIXED SIZE */
+.output-box {
+  height: 500px;          /* same as editor */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔥 SCROLL FOR RESPONSE */
+.output-box pre {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* 🔥 SMOOTH SCROLL STYLE */
+.output-box pre::-webkit-scrollbar {
+  width: 6px;
+}
+
+.output-box pre::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
+}
+/* Scroll fix */
+.response-container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Copy button */
+.copy-btn {
+  background: #1f2937;
+  color: #e5e7eb;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #374151;
+}
+/* Scroll fix */
+.response-container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Copy button */
+.copy-btn {
+  background: #1f2937;
+  color: #e5e7eb;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #374151;
+}
+/* OUTPUT HEADER */
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* RIGHT SIDE BUTTON GROUP */
+.output-actions {
+  display: flex;
+  gap: 10px; /* 🔥 gap between buttons */
+}
+
+/* BUTTON STYLE */
+.copy-btn,
+.clear-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* COPY BUTTON */
+.copy-btn {
+  background: #1f2937;
+  color: #fff;
+}
+
+.copy-btn:hover {
+  background: #374151;
+}
+
+/* CLEAR BUTTON */
+.clear-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.clear-btn:hover {
+  background: #dc2626;
+}

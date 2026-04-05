@@ -1,0 +1,53 @@
+.result-box {
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+.error-text {
+  color: #ef4444;
+}
+
+.typing {
+  color: #60a5fa;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.5; }
+}
+.output-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.copy-btn {
+  background: #1f2937;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #374151;
+}
+
+.output-content {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* markdown */
+.markdown-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+.inline-code {
+  background: #1f2937;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
