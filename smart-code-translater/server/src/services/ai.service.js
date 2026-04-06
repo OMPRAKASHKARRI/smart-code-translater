@@ -1,6 +1,9 @@
+import dotenv from "dotenv";
 import Groq from "groq-sdk";
 import { getPromptByType, SYSTEM_PROMPT } from "../utils/prompt.js";
 import { SUPPORTED_LANGUAGES, REQUEST_TYPES } from "../constants/prompt.js";
+
+dotenv.config();
 
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,

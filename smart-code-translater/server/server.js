@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import authRoutes from "./src/routes/authRoutes.js";
+import codeRoutes from "./src/routes/code.routes.js"; // ✅ ADD THIS
 
 dotenv.config();
 
@@ -15,14 +16,19 @@ app.use(cors({
 
 app.use(express.json());
 
+// ROUTES
 app.use("/api/auth", authRoutes);
-  console.log("MONGODB_URI:", process.env.MONGODB_URI);
+app.use("/api/code", codeRoutes); // ✅ ADD THIS
 
+console.log("GROQ KEY:", process.env.GROQ_API_KEY);
+
+console.log("MONGODB_URI:", process.env.MONGODB_URI);
 
 mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
-  console.log("MongoDB connected");
+  console.log("MongoDB connected ✅");
   app.listen(process.env.PORT, () =>
-    console.log(`Server running on ${process.env.PORT}`)
+    console.log(`Server running on ${process.env.PORT} 🚀`)
   );
-});
+})
+.catch(err => console.log(err));

@@ -10,7 +10,7 @@ import {
   generateDocumentation,
   refactorCode
 } from '../controllers/code.controller.js';
-import { authenticateToken } from '../middleware/auth.middleware.js';
+import { protect } from '../middleware/auth.middleware.js';
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.post('/process', processCodeRequest);
 
 // Specific code assistance endpoints
 router.post('/debug', debugCode);
-router.post('/explain', explainCode);
+router.post('/explain', explainCode, protect);
 router.post('/optimize', optimizeCode);
 router.post('/review', reviewCode);
 router.post('/tests', generateTests);
